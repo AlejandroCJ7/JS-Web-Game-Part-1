@@ -7,8 +7,10 @@ function newImage(src, left, bottom) {
     imgElement.style.left = left;
     imgElement.style.bottom = bottom;
     document.body.append(imgElement);
+return (src, left , bottom)
 }
-  newImage('assets/green-character.gif', '100px', '100px');
+
+newImage('assets/green-character.gif', '100px', '100px');
   newImage('assets/pine-tree.png', '450px', '200px'); 
   newImage('assets/tree.png', '200px', '300px');
   newImage('assets/pillar.png', '350px', '100px');
@@ -16,17 +18,13 @@ function newImage(src, left, bottom) {
   newImage('assets/well.png', '500px', '425px');
 
   function newItem(src, left, bottom) {
-  let sword = document.createElement('img');
-  sword.src = src;
-  sword.style.position = 'fixed';
-  sword.style.left = left;
-  sword.style.bottom = bottom;
-  document.body.append(sword); 
+  let sword = newItem(src, left, bottom);
+  }
   
   sword.addEventListener('click', function() {
     sword.remove()
 })
-  }
+
   newItem('assets/sword.png', '500px', '405px');
   newItem('assets/sheild.png', '165px', '185px');
   newItem('assets/staff.png', '600px', '100px');
